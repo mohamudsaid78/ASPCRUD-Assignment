@@ -1,0 +1,17 @@
+@page
+@model DeleteModel
+<h2>Delete User</h2>
+<h4>Do you want to delete this data</h4>
+
+<div>
+<p>@Model.Orders.Id</p>
+    <p>@Model.Orders.CustomerName</p>
+    <p>@Model.Orders.ProductName</p>
+</div>
+
+<form method="post">
+<input type="hidden" asp-for="Orders.Id"/>
+<button type="submit" class="btn btn-danger">Delete</button>
+<a asp-page="Students" class="btn btn-secondry">Cancel</a>
+
+</form>
